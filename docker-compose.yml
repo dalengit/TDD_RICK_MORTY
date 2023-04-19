@@ -1,0 +1,12 @@
+version: "3.3"
+    
+services:
+  sql:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: SQL 
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: 'testPW12345678!'
+    ports:
+      - '30001:1433'
